@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner z=new Scanner(System.in);
+        int a=z.nextInt(),b=z.nextInt();
+        //System.out.print("The required length is "+((2*a)+(2*b))+" m\nThe required area of carpet is "+a*b+" sqm");
+        System.out.println("The required length is "+((2*a)+(2*b))+" m");
+        System.out.print("The required area of carpet is "+a*b+" sqm");
+        
+        
+        
+        
+    }
+}
