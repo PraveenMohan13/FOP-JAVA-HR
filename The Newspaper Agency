@@ -1,0 +1,14 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+    int a,b,c;
+    a=z.nextInt();
+    b=z.nextInt();
+    c=z.nextInt();
+    System.out.println((a*b)-(a*c)-100);    
+    }
+}
