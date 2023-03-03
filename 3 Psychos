@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        int x1,y1,x2,y2;
+        x1=z.nextInt();
+        y1=z.nextInt();
+        x2=z.nextInt();
+        y2=z.nextInt();
+        double ans=(x1+x2)/2.0;
+        double ans1=(float)(y2+y1)/2;
+        System.out.printf("Arun's house is located at(%.1f,%.1f)",ans,ans1);
+    }
+}
