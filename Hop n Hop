@@ -1,0 +1,14 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       int a,b;
+        Scanner z=new Scanner(System.in);
+        a=z.nextInt();
+        b=z.nextInt();
+       int ans=(int)Math.sqrt(Math.pow(a-3,2)+Math.pow(b-4,2));
+        System.out.print(ans);
+    }
+}
