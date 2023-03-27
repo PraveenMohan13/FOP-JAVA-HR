@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        int gc,bp,bbp,f1,f2,f3,f4;
+        gc=z.nextInt();
+        bp=z.nextInt();
+        bbp=z.nextInt();
+        f1=gc*bp/100;
+        f2=gc-f1;
+        System.out.println(f1);
+        f3=f2*bbp/100;
+        f4=f2-f3;
+        System.out.println(f3);
+        System.out.println(f4/3);
+    }
+}
