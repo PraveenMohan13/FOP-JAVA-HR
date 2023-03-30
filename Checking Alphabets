@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        char a=z.next().charAt(0);
+        
+        if((a>='a'&&a<='z')||(a>='A'&&a<='Z'))
+        {
+            if(a=='a'||a=='e'||a=='i'||a=='o'||a=='u')
+                System.out.println("Vowel");
+            else
+                System.out.println("Consonant");
+        }
+        else
+            System.out.println("Not an alphabet");
+        
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        char a=z.next().charAt(0);
+        if((a>=97&&a<=122)||(a>=65&&a<=90))
+       //if(Character.isAlphabetic(a))
+        {
+            switch(a)
+            {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    System.out.println("Vowel");
+                    break;
+                default:
+                    System.out.println("Consonant");        
+            }
+        }
+        else
+            System.out.println("Not an alphabet");
+    }
+}
