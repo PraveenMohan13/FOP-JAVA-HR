@@ -1,0 +1,55 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    //int fp,fd,fs,sp,sd,ss,ap,ad,as,ans1,ans2,ans3;
+        Scanner sc=new Scanner(System.in);
+        int ans1,ans2,ans3;
+    int fp = sc.nextInt(), fd = sc.nextInt(), fs = sc.nextInt();
+    int sp = sc.nextInt(), sd = sc.nextInt(), ss = sc.nextInt();
+    int ap = sc.nextInt(), ad = sc.nextInt(), as = sc.nextInt();
+    ans1=(int)(fp-(fp*(0.01*fd)))+fs;
+    ans2=(int)(sp-(sp*(0.01*sd)))+ss;
+    ans3=(int)(ap-(ap*(0.01*ad)))+as;
+    System.out.println("In Flipkart: Rs."+ans1);
+    System.out.println("In Snapdeal: Rs."+ans2);
+    System.out.println("In Amazon: Rs."+ans3);
+    if((ans1<=ans2)&&(ans1<=ans3))
+        System.out.println("Choose Flipkart");
+    else if(ans2<=ans3&&ans2<=ans1)
+        System.out.println("Choose Snapdeal");
+    else
+        System.out.println("Choose Amazon");
+    }
+}
+-----------------------------------------------------------------------------------------------
+import java.io.*;
+import java.util.*;
+public class Solution 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner (System.in);
+        int fp = sc.nextInt(), fd = sc.nextInt(), fs = sc.nextInt();
+        int sp = sc.nextInt(), sd = sc.nextInt(), ss = sc.nextInt();
+        int ap = sc.nextInt(), ad = sc.nextInt(), as = sc.nextInt();
+        int flip, snap, amaz;
+        flip = (int)(fp-(fd*0.01*fp) + fs);
+        snap = (int)(sp-(sd*0.01*sp) + ss);
+        amaz = (int)(ap-(ad*0.01*ap) + as);
+        if(flip > snap)
+        {
+            System.out.println("In Flipkart: Rs."+flip+"\nIn Snapdeal: Rs."+snap+"\nIn Amazon: Rs."+amaz+"\nChoose Snapdeal");
+        }
+        else if(snap > amaz)
+        {
+           System.out.println("In Flipkart: Rs."+flip+"\nIn Snapdeal: Rs."+snap+"\nIn Amazon: Rs."+amaz+"\nChoose Amazon") ;
+        }
+        else 
+            System.out.println("In Flipkart: Rs."+flip+"\nIn Snapdeal: Rs."+snap+"\nIn Amazon: Rs."+amaz+"\nChoose Flipkart");
+     
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------
