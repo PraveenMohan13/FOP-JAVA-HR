@@ -1,0 +1,75 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        String s;
+        int i,len,f=0;
+        char res=' ';
+        s=z.next();
+        len=s.length();
+        int arr[]=new int[256];
+        for(i=0;i<len;i++)
+            arr[s.charAt(i)]++; //        System.out.print(arr[116]);
+
+        for(i=0;i<len;i++)
+        {
+            if(arr[s.charAt(i)]==1)
+            {
+                f=1;
+                res=s.charAt(i);
+                break;
+            }
+        }
+        
+        if(f==1)
+            System.out.print(res);
+        else
+            System.out.print("All the characters are repetitive");
+        
+        
+           
+            
+    }
+}
+---------------------------------------------------------------------------------------------------------------------
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        Scanner z=new Scanner(System.in);
+        String s;
+        int i,len,f=0,j;
+        s=z.next();
+        len=s.length();
+        int arr[]=new int[len];
+        
+        for(i=0;i<len;i++)
+        {
+        for(j=0;j<len;j++)
+        {
+            if(i!=j)
+            if(s.charAt(i)==s.charAt(j))
+                arr[i]=9;
+        }
+        }
+               
+             for(i=0;i<len;i++)
+               {
+                   if(arr[i]!=9){
+                       f=1;
+                       System.out.print(s.charAt(i));
+                       break;
+                   }
+                   
+               }
+               if(f==0)
+               System.out.print("All the characters are repetitive");
+               }
+               }
