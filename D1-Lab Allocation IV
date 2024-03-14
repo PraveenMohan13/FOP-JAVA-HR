@@ -1,0 +1,144 @@
+Lab Allocation IV
+There are 3 labs in the CSE department. The labs are L1, L2, and L3 with a seating capacity of x, y, and z respectively. A single lab needs to be allocated to a class of 'n' students. The labs need to be utilized to the maximum i.e the number of systems used should not be minimal. Which lab needs to be allocated to this class?
+Input format:
+
+Input consists of 4 integers
+
+The first input denotes 'x'
+
+The second input denotes 'y'
+
+The third input denotes 'z'
+
+The fourth input denotes 'n'
+
+
+
+Output format:
+
+Print the lab which is suitable for 'n' number of students
+
+Refer the Sample output for formatting
+
+
+
+Sample Input:
+
+30
+
+40
+
+20
+
+25
+
+
+
+Sample Output:
+
+L1
+==========================================================================
+import java.util.Scanner;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+      int n1=sc.nextInt();
+      int n2=sc.nextInt();
+      int n3=sc.nextInt();
+      int n4=sc.nextInt();
+      int v=0;
+      if(n4>n1 && n4>n2 && n4>n3){
+        System.out.print(0);
+        return;
+      }
+      while(true){
+        if(n4==n1){
+          v=1;
+          break;
+        }
+        if(n4==n2){
+          v=2;
+         break;
+        }
+        if(n4==n3){
+          v=3;
+          break;
+        }
+         n4++;
+        }
+       System.out.printf("L%d",v);
+    }
+}
+========================================================================
+import java.util.Scanner;
+class Main
+{
+    public static void main(String args[])
+    {
+        //fill the code;
+      Scanner sc= new Scanner(System.in);
+      int a=sc.nextInt();
+      int b=sc.nextInt();
+      int c=sc.nextInt();
+      int d=sc.nextInt();
+      int e=Integer.MAX_VALUE;
+      if((d<=a)&&(a<e)){
+        e=a;
+      }
+      if((d<=b)&&(b<e)){
+        e=b;
+       }
+       if((d<=c)&&(c<e)){
+        e=c;
+        }
+      if(e==a)
+        System.out.println("L1");
+      else if(e==b)
+        System.out.println("L2");
+      else if(e==c)
+        System.out.println("L3");
+      else
+        System.out.println("0");
+       }
+    }
+==============================================================================
+import java.util.Scanner;
+
+class Main
+
+{
+
+    public static void main(String args[])
+
+    {
+
+       	Scanner sc = new Scanner(System.in);
+
+      	int x = sc.nextInt();
+
+      	int y = sc.nextInt();
+
+      	int z = sc.nextInt();
+
+      	int n = sc.nextInt();
+
+      	if(-(n-x)>=0 && -(n-x)<=10 || (x-n)>=0 && (x-n)<=10)
+
+          		System.out.println("L1");
+
+      	else if(-(n-y)>=0 && -(n-y)<=10 || (y-n)>=0 && (y-n)<=10)
+
+          		System.out.println("L2");
+
+      	else if(-(n-z)>=0 && -(n-z)<=10 || (z-n)>=0 && (z-n)<=10)
+
+          		System.out.println("L3");
+
+      	else
+
+          		System.out.println(0);
+      	
+    }
+}
