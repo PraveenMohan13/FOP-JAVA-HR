@@ -1,0 +1,51 @@
+Lab Allocation I
+There are 3 labs in the CSE department(L1, L2, and L3) with a seating capacity of x, y, and z respectively. Find the lab which has minimal seating capacity. 
+Input format:
+
+Input consists of 3 integers.
+
+The first input denotes the seating capacity of L1(x)
+
+The second input denotes the seating capacity of L2(y)
+
+The third input denotes the seating capacity of L3(z)
+
+
+
+Output format:
+
+Print the minimal seating lab capacity
+
+
+
+Sample Input:
+
+30
+
+40
+
+20
+
+
+
+Sample Output:
+
+L3
+==========================================================================
+import java.util.Scanner;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner s=new Scanner(System.in);
+        int x=s.nextInt();
+        int y=s.nextInt();
+        int z=s.nextInt();
+        if(x<y&&x<z)
+        System.out.println("L1");
+        else if(y<x&&y<z)
+        System.out.printf("L2");
+        else
+        System.out.println("L3");
+    }
+}
