@@ -1,0 +1,53 @@
+Comparing 2 integers
+Get two integers x and y from the user and write a program to relate 2 integers as equal to, less than or greater than.
+Input format:
+
+Input consist of 2 integers
+
+The first input corresponds to the first number(x)
+
+The second input corresponds to the second number(y)
+
+
+
+Output format:
+
+If the first number is equal to the second number, print "x and y are equal". Otherwise, print "x greater than y" or "x less than y"
+
+
+
+Sample Input:
+
+6
+
+8
+
+
+
+Sample Output:
+
+6 less than 8
+=========================================================================================================
+import java.util.Scanner;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+    int a=obj.nextInt();
+    int b=obj.nextInt();
+    
+    if(a<b)
+    {
+        System.out.println(a+" less than "+b);
+    }
+    else if(a>b)
+    {
+        System.out.println(a+" greater than "+b);
+    }
+   else if(a==b)
+    {
+        System.out.println(a+" and "+b+" are equal");
+    }
+}
+}
