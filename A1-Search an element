@@ -1,0 +1,62 @@
+Search an element
+Arun's teacher gave him the following challenge. Help him solve it. "Given an array with 'n' elements by a user, you need to search if a particular element is present in the array or not. The element to be searched for is also given by the user"
+Input Format:
+
+Input consists of n+2 integers. 
+
+The first integer corresponds to ‘n’, the size of the array. 
+
+The next ‘n’ integers correspond to the elements in the array. 
+
+The last integer corresponds to ‘a’, the element to be searched.
+
+
+
+Output Format:
+
+Refer to sample output for details.
+
+
+
+Sample Input:
+
+5
+
+2
+
+3
+
+6
+
+8
+
+1
+
+6
+
+
+
+Sample Output:
+
+6 is present in the array
+======================================================================================================
+// "static void main" must be defined in a public class.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+           Scanner z=new Scanner(System.in);
+        int n=z.nextInt();  //size
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+            a[i]=z.nextInt();
+        int key=z.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            if(key==a[i]){
+                System.out.printf("%d is present in the array",key);
+            return;
+        }
+        }
+      System.out.printf("%d is not present in the array",key);
+}
+}
