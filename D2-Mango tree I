@@ -1,0 +1,78 @@
+Mango tree I
+Dora is interested so much in gardening and she plants more trees in her garden. She plants trees in a rectangular fashion with the order of rows and columns and numbered the trees in row-wise order. She planted the mango tree only in a 1st row, 1st column and last column. So given the tree number, your task is to find whether the given tree is a mango tree or not? Write a program to check whether the given number is a mango tree or not.
+Input format:
+
+Input consists of 3 integers
+
+The first input denotes the number of rows
+
+The second input denotes the number of columns
+
+The third input denotes the tree number
+
+
+
+Output format:
+
+If the given number is a mango tree, print "Yes". Otherwise, print "No"
+
+Refer the sample output for formatting
+
+
+
+Sample Input:
+
+5
+
+5
+
+11
+
+
+
+Sample Output:
+
+Yes
+================================================================================================
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int r=sc.nextInt();
+      int c=sc.nextInt();
+      int t=sc.nextInt();
+      if((t>0&&t<=c)||(t%c==0)||(t%c==1))
+      	System.out.print("Yes");
+      else
+        System.out.print("No");
+    }
+}
+========================================================================================
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int r=sc.nextInt();
+      int c=sc.nextInt();
+      int target=sc.nextInt();
+      int flag=0,count=0;
+      int arr[][]=new int[r+1][c+1];
+      for(int i=1;i<=r;i++){
+        for(int j=1;j<=c;j++){
+          count++;
+          arr[i][j]=count;
+          if(count==target){
+            if(j!=1 && j!=c &&i!=1){
+              System.out.print("No");
+              flag=1;
+              return ;
+            }
+          }
+        }
+      }
+      if(flag==0){
+        System.out.print("Yes");
+      }
+  }
+}
