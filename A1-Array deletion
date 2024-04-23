@@ -1,0 +1,69 @@
+Array deletion
+Given an array with 'n' elements, Suresh wants to delete an element at a particular position in the array. Help him in deleting the element and displaying the updated array.
+Input Format:
+
+Assume that the maximum number of elements in the array is 20.
+
+
+
+Output Format:
+
+Refer to the sample input and output for formatting specifications.
+
+
+
+Sample Input:
+
+5
+
+1
+
+2
+
+3
+
+4
+
+5
+
+4
+
+
+
+Sample Output:
+
+Array after deletion is
+
+1
+
+2
+
+3
+
+5
+===============================================================================================================
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner z=new Scanner(System.in);
+        int n=z.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+          a[i]=z.nextInt();
+        int pos=z.nextInt();
+        if (pos>n)
+        {
+            System.out.printf("Invalid Input");
+          	return;
+        }
+        System.out.printf("Array after deletion is\n");
+      for(int i=n-1;i>=pos;i--)
+      {
+       a[i-1] = a[i];
+      }
+        for(int i=0;i<n-1;i++)
+          System.out.println(a[i]);
+    }
+}
